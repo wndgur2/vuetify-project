@@ -1,5 +1,6 @@
 <template>
-  <HelloWorld />
+  <AppBody />
+  <AppSidebar />
 </template>
 
 <script lang="ts" setup>
