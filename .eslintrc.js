@@ -17,5 +17,6 @@ module.exports = {
   rules: {
     'vue/multi-word-component-names': 'off',
     'space-before-function-paren': 'off',
+    'arrow-parens': 'off',
   },
 }
