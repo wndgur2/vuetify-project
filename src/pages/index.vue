@@ -1,8 +1,4 @@
 <template>
-  <AppBody />
   <AppSidebar />
+  <AppBody />
 </template>
-
-<script lang="ts" setup>
-  //
-</script>

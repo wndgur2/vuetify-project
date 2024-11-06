@@ -10,21 +10,12 @@
 </template>
 
 <script setup>
-  console.log('mounted')
-  if (window.kakao && window.kakao.maps) {
-    initMap()
-  } else {
-    const script = document.createElement('script')
-    /* global kakao */
-    console.log('loading start')
-    script.onload = () => {
-      console.log('script loaded')
-      kakao.maps.load(initMap)
-    }
-    script.src =
-      'https://dapi.kakao.com/v2/maps/sdk.js?appkey=195512c37b239605dab1ef25c347bd31&libraries=services&autoload=false'
-    document.head.appendChild(script)
-  }
+  onMounted(() => {
+    kakao.maps.load(initMap)
+  })
+</script>
+
+<script>
   function initMap() {
     console.log('init map')
     const mapContainer = document.getElementById('map') // 지도를 표시할 div
